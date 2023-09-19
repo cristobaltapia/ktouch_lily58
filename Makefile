@@ -1,11 +1,15 @@
 .PHONY: all ktgen
 
-all: layout/noted.xml
-	ktouch-lesson-generator -o ktgen_course_en.xml \
+all: ktlg ktgen
+
+# Use ktouch-lesson-generator
+ktlg: layout/noted.xml
+	ktouch-lesson-generator -o ktlg_course_en.xml \
 		lessons/lily58_noted.ktgen dictionaries/dict-en_uk.txt
-	ktouch-lesson-generator -o ktgen_course_de.xml \
+	ktouch-lesson-generator -o ktlg_course_de.xml \
 		lessons/lily58_noted.ktgen dictionaries/dict-de_de.txt
 
+# Use ktgen
 ktgen: layout/noted.xml
 	ktgen --output-file ktgen_course_en.xml \
 		--text-file dictionaries/dict-en_uk.txt \
