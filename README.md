@@ -13,6 +13,24 @@ To generate the lessons use the following command
 make all
 ```
 
+## Generate layout for KTouch
+
+Different layouts for the Lily58 can be created with the provided python script `layout/generate_layout.py`.
+Use it as follows:
+
+```bash
+python generate_layout.py --keyboard-config=lily58_config.json --layout=noted_layout.json --name=noted
+```
+
+The file `lily58_config.json` defines general properties for the keyboard, like position of keys and fingers associated to each key.
+The file `noted_layout.json` defines the layout to be generated with the different layers defined within a json array.
+
+The noted layout can be generated with
+
+```bash
+make layout
+```
+
 ## Author
 
 - Cristóbal Tapia Camú
