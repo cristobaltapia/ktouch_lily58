@@ -136,9 +136,9 @@ def main():
     name = ET.SubElement(root, "id")
     name.text = f"{{{uuid.uuid4()}}}"
     name = ET.SubElement(root, "title")
-    name.text = "Lily58-test"
+    name.text = f"Lily58-{NAME}"
     name = ET.SubElement(root, "name")
-    name.text = "Lily58"
+    name.text = "de(noted)"
     width = ET.SubElement(root, "width")
     width.text = "1290"
     height = ET.SubElement(root, "height")
