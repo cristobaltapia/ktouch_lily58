@@ -1,6 +1,12 @@
-.PHONY: all ktgen
+.PHONY: all ktgen layout
 
 all: ktlg ktgen
+
+layout: layout/generate_layout.py
+	cd layout && python generate_layout.py \
+		--keyboard-config=lily58_config.json \
+		--layout=noted_layout.json \
+		--name=noted
 
 # Use ktouch-lesson-generator
 ktlg: layout/noted.xml
